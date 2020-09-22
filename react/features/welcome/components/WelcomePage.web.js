@@ -1,24 +1,24 @@
 /* global interfaceConfig */
 
-import React from 'react';
+import React from "react";
 
-import { isMobileBrowser } from '../../base/environment/utils';
-import { translate, translateToHTML } from '../../base/i18n';
-import { Icon, IconWarning } from '../../base/icons';
-import { Watermarks } from '../../base/react';
-import { connect } from '../../base/redux';
-import { CalendarList } from '../../calendar-sync';
-import { RecentList } from '../../recent-list';
-import { SettingsButton, SETTINGS_TABS } from '../../settings';
+import { isMobileBrowser } from "../../base/environment/utils";
+import { translate, translateToHTML } from "../../base/i18n";
+import { Icon, IconWarning } from "../../base/icons";
+import { Watermarks } from "../../base/react";
+import { connect } from "../../base/redux";
+import { CalendarList } from "../../calendar-sync";
+import { RecentList } from "../../recent-list";
+import { SettingsButton, SETTINGS_TABS } from "../../settings";
 
-import { AbstractWelcomePage, _mapStateToProps } from './AbstractWelcomePage';
-import Tabs from './Tabs';
+import { AbstractWelcomePage, _mapStateToProps } from "./AbstractWelcomePage";
+import Tabs from "./Tabs";
 
 /**
  * The pattern used to validate room name.
  * @type {string}
  */
-export const ROOM_NAME_VALIDATE_PATTERN_STR = '^[^?&:\u0022\u0027%#]+$';
+export const ROOM_NAME_VALIDATE_PATTERN_STR = "^[^?&:\u0022\u0027%#]+$";
 
 /**
  * The Web container rendering the welcome page.
@@ -32,7 +32,7 @@ class WelcomePage extends AbstractWelcomePage {
      * @static
      */
     static defaultProps = {
-        _room: ''
+        _room: "",
     };
 
     /**
@@ -49,7 +49,7 @@ class WelcomePage extends AbstractWelcomePage {
 
             generateRoomnames:
                 interfaceConfig.GENERATE_ROOMNAMES_ON_WELCOME_PAGE,
-            selectedTab: 0
+            selectedTab: 0,
         };
 
         /**
@@ -91,7 +91,8 @@ class WelcomePage extends AbstractWelcomePage {
          * @type {HTMLTemplateElement|null}
          */
         this._additionalContentTemplate = document.getElementById(
-            'welcome-page-additional-content-template');
+            "welcome-page-additional-content-template"
+        );
 
         /**
          * The template to use as the additional content for the welcome page header toolbar.
@@ -101,7 +102,7 @@ class WelcomePage extends AbstractWelcomePage {
          * @type {HTMLTemplateElement|null}
          */
         this._additionalToolbarContentTemplate = document.getElementById(
-            'settings-toolbar-additional-content-template'
+            "settings-toolbar-additional-content-template"
         );
 
         // Bind event handlers so they are only bound once per instance.
@@ -111,8 +112,9 @@ class WelcomePage extends AbstractWelcomePage {
         this._setAdditionalContentRef
             = this._setAdditionalContentRef.bind(this);
         this._setRoomInputRef = this._setRoomInputRef.bind(this);
-        this._setAdditionalToolbarContentRef
-            = this._setAdditionalToolbarContentRef.bind(this);
+        this._setAdditionalToolbarContentRef = this._setAdditionalToolbarContentRef.bind(
+            this
+        );
         this._onTabSelected = this._onTabSelected.bind(this);
         this._renderFooter = this._renderFooter.bind(this);
     }
@@ -127,7 +129,7 @@ class WelcomePage extends AbstractWelcomePage {
     componentDidMount() {
         super.componentDidMount();
 
-        document.body.classList.add('welcome-page');
+        document.body.classList.add("welcome-page");
         document.title = interfaceConfig.APP_NAME;
 
         if (this.state.generateRoomnames) {
@@ -136,7 +138,8 @@ class WelcomePage extends AbstractWelcomePage {
 
         if (this._shouldShowAdditionalContent()) {
             this._additionalContentRef.appendChild(
-                this._additionalContentTemplate.content.cloneNode(true));
+                this._additionalContentTemplate.content.cloneNode(true)
+            );
         }
 
         if (this._shouldShowAdditionalToolbarContent()) {
@@ -161,7 +164,7 @@ class WelcomePage extends AbstractWelcomePage {
     componentWillUnmount() {
         super.componentWillUnmount();
 
-        document.body.classList.remove('welcome-page');
+        document.body.classList.remove("welcome-page");
     }
 
     /**
@@ -285,11 +288,9 @@ class WelcomePage extends AbstractWelcomePage {
      */
     _doRenderInsecureRoomNameWarning() {
         return (
-            <div className = 'insecure-room-name-warning'>
-                <Icon src = { IconWarning } />
-                <span>
-                    { this.props.t('security.insecureRoomNameWarning') }
-                </span>
+            <div className="insecure-room-name-warning">
+                <Icon src={IconWarning} />
+                <span>{this.props.t("security.insecureRoomNameWarning")}</span>
             </div>
         );
     }
@@ -381,7 +382,8 @@ class WelcomePage extends AbstractWelcomePage {
      * @returns {ReactElement|null}
      */
     _renderTabs() {
-        if (isMobileBrowser()) {
+        // hardcode remove tabs
+        if (true || isMobileBrowser()) {
             return null;
         }
 
@@ -391,15 +393,15 @@ class WelcomePage extends AbstractWelcomePage {
 
         if (_calendarEnabled) {
             tabs.push({
-                label: t('welcomepage.calendar'),
-                content: <CalendarList />
+                label: t("welcomepage.calendar"),
+                content: <CalendarList />,
             });
         }
 
         if (_recentListEnabled) {
             tabs.push({
-                label: t('welcomepage.recentList'),
-                content: <RecentList />
+                label: t("welcomepage.recentList"),
+                content: <RecentList />,
             });
         }
 
@@ -409,9 +411,11 @@ class WelcomePage extends AbstractWelcomePage {
 
         return (
             <Tabs
-                onSelect = { this._onTabSelected }
-                selected = { this.state.selectedTab }
-                tabs = { tabs } />);
+                onSelect={this._onTabSelected}
+                selected={this.state.selectedTab}
+                tabs={tabs}
+            />
+        );
     }
 
     /**
@@ -486,10 +490,12 @@ class WelcomePage extends AbstractWelcomePage {
      * @returns {boolean}
      */
     _shouldShowAdditionalContent() {
-        return interfaceConfig.DISPLAY_WELCOME_PAGE_CONTENT
-            && this._additionalContentTemplate
-            && this._additionalContentTemplate.content
-            && this._additionalContentTemplate.innerHTML.trim();
+        return (
+            interfaceConfig.DISPLAY_WELCOME_PAGE_CONTENT &&
+            this._additionalContentTemplate &&
+            this._additionalContentTemplate.content &&
+            this._additionalContentTemplate.innerHTML.trim()
+        );
     }
 
     /**
@@ -500,10 +506,12 @@ class WelcomePage extends AbstractWelcomePage {
      * @returns {boolean}
      */
     _shouldShowAdditionalToolbarContent() {
-        return interfaceConfig.DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT
-            && this._additionalToolbarContentTemplate
-            && this._additionalToolbarContentTemplate.content
-            && this._additionalToolbarContentTemplate.innerHTML.trim();
+        return (
+            interfaceConfig.DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT &&
+            this._additionalToolbarContentTemplate &&
+            this._additionalToolbarContentTemplate.content &&
+            this._additionalToolbarContentTemplate.innerHTML.trim()
+        );
     }
 }
 
