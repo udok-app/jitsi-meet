@@ -6,7 +6,7 @@ var config = {
 
     hosts: {
         // XMPP domain.
-        domain: 'jitsi-meet.example.com',
+        domain: "jitsi-meet.example.com",
 
         // When using authentication, domain for guest users.
         // anonymousdomain: 'guest.example.com',
@@ -21,23 +21,22 @@ var config = {
         // focus: 'focus.jitsi-meet.example.com',
 
         // XMPP MUC domain. FIXME: use XEP-0030 to discover it.
-        muc: 'conference.jitsi-meet.example.com'
+        muc: "conference.jitsi-meet.example.com",
     },
 
     // BOSH URL. FIXME: use XEP-0156 to discover it.
-    bosh: '//jitsi-meet.example.com/http-bind',
+    bosh: "//jitsi-meet.example.com/http-bind",
 
     // Websocket URL
     // websocket: 'wss://jitsi-meet.example.com/xmpp-websocket',
 
     // The name of client node advertised in XEP-0115 'c' stanza
-    clientNode: 'http://jitsi.org/jitsimeet',
+    clientNode: "http://jitsi.org/jitsimeet",
 
     // The real JID of focus participant - can be overridden here
     // Do not change username - FIXME: Make focus username configurable
     // https://github.com/jitsi/jitsi-meet/issues/7376
     // focusUserJid: 'focus@auth.jitsi-meet.example.com',
-
 
     // Testing / experimental features.
     //
@@ -49,7 +48,7 @@ var config = {
 
         // P2P test mode disables automatic switching to P2P when there are 2
         // participants in the conference.
-        p2pTestMode: false
+        p2pTestMode: false,
 
         // Enables the test specific features consumed by jitsi-meet-torture
         // testMode: false
@@ -79,14 +78,13 @@ var config = {
     // signalling.
     // webrtcIceTcpDisable: false,
 
-
     // Media
     //
 
     // Audio
 
     // Disable measuring of audio levels.
-    // disableAudioLevels: false,
+    disableAudioLevels: false,
     // audioLevelsInterval: 200,
 
     // Enabling this will run the lib-jitsi-meet no audio detection module which
@@ -181,6 +179,8 @@ var config = {
     //     max: 5
     // },
 
+    isDesktopSharingEnabled: false,
+
     // Try to start calls with screen-sharing instead of camera video.
     // startScreenSharing: false,
 
@@ -208,7 +208,7 @@ var config = {
     // fileRecordingsServiceSharingEnabled: false,
 
     // Whether to enable live streaming or not.
-    // liveStreamingEnabled: false,
+    liveStreamingEnabled: false,
 
     // Transcription (in interface_config,
     // subtitles and buttons can be configured)
@@ -339,7 +339,6 @@ var config = {
     // openBridgeChannel: true,
     openBridgeChannel: 'websocket',
 
-
     // UI
     //
 
@@ -351,17 +350,17 @@ var config = {
 
     // Whether to use a welcome page or not. In case it's false a random room
     // will be joined when no room is specified.
-    enableWelcomePage: true,
+    enableWelcomePage: false,
 
     // Enabling the close page will ignore the welcome page redirection when
     // a call is hangup.
-    // enableClosePage: false,
+    enableClosePage: true,
 
     // Disable hiding of remote thumbnails when in a 1-on-1 conference call.
     // disable1On1Mode: false,
 
     // Default language for the user interface.
-    // defaultLanguage: 'en',
+    defaultLanguage: "pt-br",
 
     // Disables profile and the edit of all fields from the profile settings (display name and email)
     // disableProfile: false,
@@ -379,15 +378,15 @@ var config = {
 
     // Enables calendar integration, depends on googleApiApplicationClientID
     // and microsoftApiApplicationClientID
-    // enableCalendarIntegration: false,
+    enableCalendarIntegration: false,
 
     // When 'true', it shows an intermediate page before joining, where the user can configure their devices.
-    // prejoinPageEnabled: false,
+    prejoinPageEnabled: false,
 
     // If true, shows the unsafe room name warning label when a room name is
     // deemed unsafe (due to the simplicity in the name) and a password is not
     // set or the lobby is not enabled.
-    // enableInsecureRoomNameWarning: false,
+    enableInsecureRoomNameWarning: false,
 
     // Whether to automatically copy invitation URL after creating a room.
     // Document should be focused for this option to work
@@ -424,7 +423,6 @@ var config = {
     // will not function.
     // disableThirdPartyRequests: false,
 
-
     // Peer-To-Peer mode: used (if enabled) when there are just 2 participants.
     //
 
@@ -439,10 +437,9 @@ var config = {
 
         // The STUN servers that will be used in the peer to peer connections
         stunServers: [
-
             // { urls: 'stun:jitsi-meet.example.com:3478' },
-            { urls: 'stun:meet-jit-si-turnrelay.jitsi.net:443' }
-        ]
+            { urls: "stun:meet-jit-si-turnrelay.jitsi.net:443" },
+        ],
 
         // Sets the ICE transport policy for the p2p connection. At the time
         // of this writing the list of possible values are 'all' and 'relay',
@@ -475,14 +472,11 @@ var config = {
     analytics: {
         // The Google Analytics Tracking ID:
         // googleAnalyticsTrackingId: 'your-tracking-id-UA-123456-1'
-
         // Matomo configuration:
         // matomoEndpoint: 'https://your-matomo-endpoint/',
         // matomoSiteID: '42',
-
         // The Amplitude APP Key:
         // amplitudeAPPKey: '<APP_KEY>'
-
         // Configuration for the rtcstats server:
         // By enabling rtcstats server every time a conference is joined the rtcstats
         // module connects to the provided rtcstatsEndpoint and sends statistics regarding
@@ -492,12 +486,10 @@ var config = {
 
         // In order to enable rtcstats one needs to provide a endpoint url.
         // rtcstatsEndpoint: wss://rtcstats-server-pilot.jitsi.net/,
-
         // The interval at which rtcstats will poll getStats, defaults to 1000ms.
         // If the value is set to 0 getStats won't be polled and the rtcstats client
         // will only send data related to RTCPeerConnection events.
         // rtcstatsPolIInterval: 1000
-
         // Array of script URLs to load as lib-jitsi-meet "analytics handlers".
         // scriptURLs: [
         //      "libs/analytics-ga.min.js", // google-analytics
@@ -572,7 +564,7 @@ var config = {
 
     // If true, any checks to handoff to another application will be prevented
     // and instead the app will continue to display in the current browser.
-    // disableDeepLinking: false,
+    disableDeepLinking: true,
 
     // A property to disable the right click context menu for localVideo
     // the menu has option to flip the locally seen video for local presentations
@@ -620,7 +612,7 @@ var config = {
          logoImageUrl: 'https://example.com/logo-img.png'
      }
     */
-    // brandingDataUrl: '',
+    brandingDataUrl: "https://udok.com.br",
 
     // The URL of the moderated rooms microservice, if available. If it
     // is present, a link to the service will be rendered on the welcome page,
@@ -682,10 +674,9 @@ var config = {
      startBitrate
      */
 
-
     // Allow all above example options to include a trailing comma and
     // prevent fear when commenting out the last value.
-    makeJsonParserHappy: 'even if last key had a trailing comma'
+    makeJsonParserHappy: "even if last key had a trailing comma",
 
     // no configuration value should follow this line.
 };

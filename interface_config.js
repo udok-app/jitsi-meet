@@ -2,9 +2,9 @@
 /* eslint sort-keys: ["error", "asc", {"caseSensitive": false}] */
 
 var interfaceConfig = {
-    APP_NAME: 'Jitsi Meet',
-    AUDIO_LEVEL_PRIMARY_COLOR: 'rgba(255,255,255,0.4)',
-    AUDIO_LEVEL_SECONDARY_COLOR: 'rgba(255,255,255,0.2)',
+    APP_NAME: "Udok",
+    AUDIO_LEVEL_PRIMARY_COLOR: "rgba(255,255,255,0.4)",
+    AUDIO_LEVEL_SECONDARY_COLOR: "rgba(255,255,255,0.2)",
 
     /**
      * A UX mode where the last screen share participant is automatically
@@ -14,8 +14,8 @@ var interfaceConfig = {
      *
      * Note: this mode is experimental and subject to breakage.
      */
-    AUTO_PIN_LATEST_SCREEN_SHARE: 'remote-only',
-    BRAND_WATERMARK_LINK: '',
+    AUTO_PIN_LATEST_SCREEN_SHARE: "remote-only",
+    BRAND_WATERMARK_LINK: "",
 
     CLOSE_PAGE_GUEST_HINT: false, // A html text to be shown to guests on the close page, false disables it
     /**
@@ -45,9 +45,9 @@ var interfaceConfig = {
     CONNECTION_INDICATOR_DISABLED: false,
 
     DEFAULT_BACKGROUND: '#474747',
-    DEFAULT_LOCAL_DISPLAY_NAME: 'me',
+    DEFAULT_LOCAL_DISPLAY_NAME: 'eu',
     DEFAULT_LOGO_URL: 'images/watermark.svg',
-    DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Jitster',
+    DEFAULT_REMOTE_DISPLAY_NAME: 'participante',
     DEFAULT_WELCOME_PAGE_LOGO_URL: 'images/watermark.svg',
 
     DISABLE_DOMINANT_SPEAKER_INDICATOR: false,
@@ -84,7 +84,7 @@ var interfaceConfig = {
      * Whether or not the blurred video background for large video should be
      * displayed on browsers that can support it.
      */
-    DISABLE_VIDEO_BACKGROUND: false,
+    DISABLE_VIDEO_BACKGROUND: true,
 
     DISPLAY_WELCOME_FOOTER: true,
     DISPLAY_WELCOME_PAGE_ADDITIONAL_CARD: false,
@@ -102,7 +102,7 @@ var interfaceConfig = {
      */
     filmStripOnly: false,
 
-    GENERATE_ROOMNAMES_ON_WELCOME_PAGE: true,
+    GENERATE_ROOMNAMES_ON_WELCOME_PAGE: false,
 
     /**
      * Hide the logo on the deep linking pages.
@@ -112,13 +112,13 @@ var interfaceConfig = {
     /**
      * Hide the invite prompt in the header when alone in the meeting.
      */
-    HIDE_INVITE_MORE_HEADER: false,
+    HIDE_INVITE_MORE_HEADER: true,
 
     INITIAL_TOOLBAR_TIMEOUT: 20000,
-    JITSI_WATERMARK_LINK: 'https://jitsi.org',
+    JITSI_WATERMARK_LINK: "https://udok.com.br",
 
     LANG_DETECTION: true, // Allow i18n to detect the system language
-    LIVE_STREAMING_HELP_LINK: 'https://jitsi.org/live', // Documentation reference for the live streaming feature.
+    LIVE_STREAMING_HELP_LINK: "https://suporte.udok.com.br", // Documentation reference for the live streaming feature.
     LOCAL_THUMBNAIL_RATIO: 16 / 9, // 16:9
 
     /**
@@ -136,33 +136,40 @@ var interfaceConfig = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: true,
+    MOBILE_APP_PROMO: false,
 
     /**
      * Specify custom URL for downloading android mobile app.
      */
-    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=org.jitsi.meet',
+    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=br.com.udok.meet',
 
     /**
      * Specify custom URL for downloading f droid app.
      */
-    MOBILE_DOWNLOAD_LINK_F_DROID: 'https://f-droid.org/en/packages/org.jitsi.meet/',
+    MOBILE_DOWNLOAD_LINK_F_DROID: 'https://f-droid.org/en/packages/br.com.udok.meet/',
 
     /**
      * Specify URL for downloading ios mobile app.
      */
-    MOBILE_DOWNLOAD_LINK_IOS: 'https://itunes.apple.com/us/app/jitsi-meet/id1165103905',
+    MOBILE_DOWNLOAD_LINK_IOS: 'https://apps.apple.com/us/app/udok-v%C3%ADdeo/id1538836433',
 
-    NATIVE_APP_NAME: 'Jitsi Meet',
+    NATIVE_APP_NAME: 'UDOK',
 
     // Names of browsers which should show a warning stating the current browser
     // has a suboptimal experience. Browsers which are not listed as optimal or
     // unsupported are considered suboptimal. Valid values are:
     // chrome, chromium, edge, electron, firefox, nwjs, opera, safari
-    OPTIMAL_BROWSERS: [ 'chrome', 'chromium', 'firefox', 'nwjs', 'electron', 'safari' ],
+    OPTIMAL_BROWSERS: [
+        "chrome",
+        "chromium",
+        "firefox",
+        "nwjs",
+        "electron",
+        "safari",
+    ],
 
     POLICY_LOGO: null,
-    PROVIDER_NAME: 'Jitsi',
+    PROVIDER_NAME: "Udok",
 
     /**
      * If true, will display recent list
@@ -172,18 +179,24 @@ var interfaceConfig = {
     RECENT_LIST_ENABLED: true,
     REMOTE_THUMBNAIL_RATIO: 1, // 1:1
 
-    SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
+    SETTINGS_SECTIONS: [
+        "devices",
+        "language",
+        "moderator",
+        "profile",
+        "calendar",
+    ],
     SHOW_BRAND_WATERMARK: false,
 
     /**
-    * Decides whether the chrome extension banner should be rendered on the landing page and during the meeting.
-    * If this is set to false, the banner will not be rendered at all. If set to true, the check for extension(s)
-    * being already installed is done before rendering.
-    */
+     * Decides whether the chrome extension banner should be rendered on the landing page and during the meeting.
+     * If this is set to false, the banner will not be rendered at all. If set to true, the check for extension(s)
+     * being already installed is done before rendering.
+     */
     SHOW_CHROME_EXTENSION_BANNER: false,
 
     SHOW_DEEP_LINKING_IMAGE: false,
-    SHOW_JITSI_WATERMARK: true,
+    SHOW_JITSI_WATERMARK: false,
     SHOW_POWERED_BY: false,
     SHOW_PROMOTIONAL_CLOSE_PAGE: false,
 
@@ -191,7 +204,7 @@ var interfaceConfig = {
      * If indicated some of the error dialogs may point to the support URL for
      * help.
      */
-    SUPPORT_URL: 'https://community.jitsi.org/',
+    SUPPORT_URL: "https://suporte.udok.com.br/",
 
     TOOLBAR_ALWAYS_VISIBLE: false,
 
@@ -207,11 +220,34 @@ var interfaceConfig = {
      * - 'desktop' controls the "Share your screen" button
      */
     TOOLBAR_BUTTONS: [
-        'microphone', 'camera', 'closedcaptions', 'desktop', 'embedmeeting', 'fullscreen',
-        'fodeviceselection', 'hangup', 'profile', 'chat', 'recording',
-        'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone', 'security'
+        "microphone",
+        "camera",
+        "closedcaptions",
+        //"desktop",
+        //"embedmeeting",
+        "fullscreen",
+        "fodeviceselection",
+        "hangup",
+        "profile",
+        //"chat",
+        "recording",
+        //"livestreaming",
+        //"etherpad",
+        //"sharedvideo",
+        //"settings",
+        //"raisehand",
+        "videoquality",
+        //"filmstrip",
+        //"invite",
+        //"feedback",
+        //"stats",
+        "shortcuts",
+        "tileview",
+        //"videobackgroundblur",
+        //"download",
+        //"help",
+        "mute-everyone",
+        //"security",
     ],
 
     TOOLBAR_TIMEOUT: 4000,
@@ -229,7 +265,7 @@ var interfaceConfig = {
     // screen, 'height' would fit the original video height to the height of the
     // screen, 'width' would fit the original video width to the width of the
     // screen respecting ratio.
-    VIDEO_LAYOUT_FIT: 'both',
+    VIDEO_LAYOUT_FIT: "both",
 
     /**
      * If true, hides the video quality label indicating the resolution status
@@ -282,7 +318,7 @@ var interfaceConfig = {
     // Allow all above example options to include a trailing comma and
     // prevent fear when commenting out the last value.
     // eslint-disable-next-line sort-keys
-    makeJsonParserHappy: 'even if last key had a trailing comma'
+    makeJsonParserHappy: "even if last key had a trailing comma",
 
     // No configuration value should follow this line.
 };
