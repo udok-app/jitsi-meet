@@ -101,8 +101,7 @@ function _getWebConferenceRoute(state): ?Promise<Route> {
         } else {
             route.component = UnsupportedDesktopBrowser;
         }
-        console.log("!!!", isSupportedBrowser(), route);
-        route.component = Conference;
+        //route.component = Conference;
 
         return route;
     });

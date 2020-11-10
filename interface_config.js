@@ -117,7 +117,7 @@ var interfaceConfig = {
     INITIAL_TOOLBAR_TIMEOUT: 20000,
     JITSI_WATERMARK_LINK: "https://udok.com.br",
 
-    LANG_DETECTION: true, // Allow i18n to detect the system language
+    LANG_DETECTION: false, // Allow i18n to detect the system language
     LIVE_STREAMING_HELP_LINK: "https://suporte.udok.com.br", // Documentation reference for the live streaming feature.
     LOCAL_THUMBNAIL_RATIO: 16 / 9, // 16:9
 
@@ -136,7 +136,7 @@ var interfaceConfig = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: false,
+    MOBILE_APP_PROMO: true,
 
     /**
      * Specify custom URL for downloading android mobile app.
@@ -152,6 +152,11 @@ var interfaceConfig = {
      * Specify URL for downloading ios mobile app.
      */
     MOBILE_DOWNLOAD_LINK_IOS: 'https://apps.apple.com/us/app/udok-v%C3%ADdeo/id1538836433',
+
+    /**
+     * Specify URL for downloading windows desktop app.
+     */
+    DESKTOP_DOWNLOAD_LINK_WIN: 'https://udok.com.br/installers/udok-video-win64.zip',
 
     NATIVE_APP_NAME: 'UDOK',
 
@@ -223,7 +228,7 @@ var interfaceConfig = {
         "microphone",
         "camera",
         "closedcaptions",
-        //"desktop",
+        "desktop",
         //"embedmeeting",
         "fullscreen",
         "fodeviceselection",
@@ -244,7 +249,7 @@ var interfaceConfig = {
         "shortcuts",
         "tileview",
         //"videobackgroundblur",
-        //"download",
+        "download",
         //"help",
         "mute-everyone",
         //"security",
@@ -282,6 +287,16 @@ var interfaceConfig = {
     // TILE_VIEW_MAX_COLUMNS: 5,
 
     /**
+     * Specify custom URL for downloading android mobile app.
+     */
+    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=br.com.udok.meet',
+
+    /**
+     * Specify URL for downloading ios mobile app.
+     */
+    MOBILE_DOWNLOAD_LINK_IOS: 'hhttps://apps.apple.com/us/app/udok-v%C3%ADdeo/id1538836433',
+
+    /**
      * Specify Firebase dynamic link properties for the mobile apps.
      */
     // MOBILE_DYNAMIC_LINK: {
@@ -295,12 +310,12 @@ var interfaceConfig = {
     /**
      * Specify mobile app scheme for opening the app from the mobile browser.
      */
-    // APP_SCHEME: 'org.jitsi.meet',
+    APP_SCHEME: 'udok-video',
 
     /**
      * Specify the Android app package name.
      */
-    // ANDROID_APP_PACKAGE: 'org.jitsi.meet',
+    ANDROID_APP_PACKAGE: 'br.com.udok.meet',
 
     /**
      * Override the behavior of some notifications to remain displayed until

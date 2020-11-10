@@ -118,6 +118,7 @@
         "appNotInstalled": "Você precisa do aplicativo móvel {{app}} para participar da reunião no seu telefone.",
         "description": "Nada acontece? Estamos tentando iniciar sua reunião no aplicativo desktop {{app}}. Tente novamente ou inicie ele na aplicação web {{app}}.",
         "descriptionWithoutWeb": "Nada aconteceu? Tentamos iniciar sua reunião no aplicativo de desktop {{app}}.",
+        "descriptionDesktopDownload": "Ainda não tem o o aplicativo de desktop {{app}}?.",
         "downloadApp": "Baixe o Aplicativo",
         "launchWebButton": "Iniciar na web",
         "openApp": "Continue na aplicação",

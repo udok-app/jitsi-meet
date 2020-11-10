@@ -1,4 +1,5 @@
 // @flow
+import {generateDeepLinkingURL} from './functions';
 
 /**
  * Opens the desktop app.
@@ -8,5 +9,11 @@
  * with false otherwise.
  */
 export function _openDesktopApp(state: Object) { // eslint-disable-line no-unused-vars
-    return Promise.resolve(false);
+    const url = generateDeepLinkingURL();
+    try {
+        document.location = url;
+        return Promise.resolve(true);
+    } catch (e) {
+        return Promise.resolve(false);
+    }
 }

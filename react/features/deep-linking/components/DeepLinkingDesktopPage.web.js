@@ -75,7 +75,7 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
         const { HIDE_DEEP_LINKING_LOGO, NATIVE_APP_NAME, SHOW_DEEP_LINKING_IMAGE } = interfaceConfig;
         const rightColumnStyle
             = SHOW_DEEP_LINKING_IMAGE ? null : { width: '100%' };
-
+        console.log("!!! isSupportedBrowser()", isSupportedBrowser())
         return (
 
             // Enabling light theme because of the color of the buttons.
@@ -128,10 +128,33 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
                                         </Button>
                                         {
                                             isSupportedBrowser()
-                                                && <Button onClick = { this._onLaunchWeb }>
+                                                && <Button onClick = { this._onLaunchWeb } appearance = 'primary'>
                                                     { t(`${_TNS}.launchWebButton`) }
                                                 </Button>
                                         }
+                                    </ButtonGroup>
+                                </div>
+                                <h1 className = 'title'>
+                                    {
+                                        t(`${_TNS}.desktopDownloadTitle`,
+                                        { app: NATIVE_APP_NAME })
+                                    }
+                                </h1>
+                                <p className = 'description'>
+                                    {
+                                        t(
+                                            `${_TNS}.descriptionDesktopDownload`,
+                                            { app: NATIVE_APP_NAME }
+                                        )
+                                    }
+                                </p>
+                                <div className = 'buttons'>
+                                    <ButtonGroup>
+                                        <Button
+                                            appearance = 'default'
+                                            onClick = { this._onDownloadWin }>
+                                            { t(`${_TNS}.winDownloadButton`) }
+                                        </Button>
                                     </ButtonGroup>
                                 </div>
                             </div>
@@ -168,6 +191,19 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
             createDeepLinkingPageEvent(
                 'clicked', 'launchWebButton', { isMobileBrowser: false }));
         this.props.dispatch(openWebApp());
+    }
+
+    /**
+     * Handles install windows app button click.
+     *
+     * @returns {void}
+     */
+    _onDownloadWin() {
+        const { DESKTOP_DOWNLOAD_LINK_WIN } = interfaceConfig;
+        sendAnalytics(
+            createDeepLinkingPageEvent(
+                'clicked', 'launchDesktopAppInstall', { isMobileBrowser: false }));
+        window.open(DESKTOP_DOWNLOAD_LINK_WIN);
     }
 }
 
