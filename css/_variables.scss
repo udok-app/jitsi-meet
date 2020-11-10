@@ -148,7 +148,7 @@ $formPadding: 16px;
 /**
  * Unsupported browser
  */
-$primaryUnsupportedBrowserButtonBgColor: #0052cc;
+$primaryUnsupportedBrowserButtonBgColor: #00a65e;
 $unsupportedBrowserButtonBgColor: rgba(9, 30, 66, 0.04);
 $unsupportedBrowserTextColor: #4a4a4a;
 $unsupportedBrowserTextSmallFontSize: 17px;
@@ -178,7 +178,7 @@ $welcomePageBackground: linear-gradient(
 );
 $welcomePageTitleColor: #fff;
 
-$welcomePageHeaderBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/welcome-background.png');
+$welcomePageHeaderBackground: transparent;
 $welcomePageHeaderBackgroundPosition: center;
 $welcomePageHeaderBackgroundRepeat: none;
 $welcomePageHeaderBackgroundSize: cover;
@@ -195,7 +195,7 @@ $welcomePageHeaderTextTitleFontWeight: normal;
 $welcomePageHeaderTextTitleLineHeight: 50px;
 $welcomePageHeaderTextTitleOpacity: 1;
 
-$welcomePageEnterRoomDisplay: flex;
+$welcomePageEnterRoomDisplay: none;
 $welcomePageEnterRoomWidth: calc(100% - 32px);
 $welcomePageEnterRoomPadding: 4px;
 $welcomePageEnterRoomMargin: 0 auto;
@@ -244,7 +244,7 @@ $deepLinkingMobileButtonWidth: auto;
 $deepLinkingMobileButtonFontWeight: bold;
 $deepLinkingMobileButtonFontSize: inherit;
 
-$primaryDeepLinkingMobileButtonBorderRadius: inherit;
+$primaryDeepLinkingMobileButtonBorderRadius: 8px;
 
 /**
 * Chrome extension banner variables.
