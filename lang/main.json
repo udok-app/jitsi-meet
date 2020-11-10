@@ -935,5 +935,9 @@
         "passwordJoinButton": "Join",
         "reject": "Reject",
         "toggleLabel": "Enable lobby"
+    },
+    "browserunsupported": {
+        "title": "This browser cannot make video-calls",
+        "description": "This browser has no support for WebRTC technology. You can try again with your devices default browser or install our apps for best use and quality."
     }
 }

@@ -753,5 +753,9 @@
         "startMeeting": "Iniciar chamada de vídeo",
         "terms": "Termos",
         "title": "Videoconferências mais seguras, flexíveis e totalmente gratuitas"
+    },
+    "browserunsupported": {
+        "title": "Esse navegador não suporta vídeo-chamadas",
+        "description": "Esse navegador não suporta a tecnologia WebRTC para vídeo-chamadas. Você pode tentar com o navegador padrão de seu dispositivo móvel, ou instalar nosso aplicativo abaixo"
     }
 }

@@ -825,5 +825,9 @@
         "passwordJoinButton": "Solicitar",
         "reject": "Rejeitar",
         "toggleLabel": "Habilitar lobby"
+    },
+    "browserunsupported": {
+        "title": "Esse navegador não suporta vídeo-chamadas",
+        "description": "Esse navegador não suporta a tecnologia WebRTC para vídeo-chamadas. Você pode tentar novamente com o navegador padrão de seu dispositivo ou instalar nosso aplicativo abaixo para uma melhor experiência."
     }
 }

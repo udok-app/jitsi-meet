@@ -9,7 +9,7 @@ import { isVpaasMeeting } from '../billing-counter/functions';
 import {
     DeepLinkingDesktopPage,
     DeepLinkingMobilePage,
-    NoMobileApp
+    BrowserNotSupported
 } from './components';
 import { _openDesktopApp } from './openDesktopApp';
 
@@ -65,7 +65,7 @@ export function getDeepLinkingPage(state) {
                 && interfaceConfig.MOBILE_APP_PROMO;
 
         if (!isSupportedMobileBrowser()) {
-            return Promise.resolve(NoMobileApp);
+            return Promise.resolve(BrowserNotSupported);
         }
 
         return Promise.resolve(
