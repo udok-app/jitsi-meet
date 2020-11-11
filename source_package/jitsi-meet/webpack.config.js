@@ -160,6 +160,10 @@ const config = {
         // default Webpack does not leak path-related information and provides a
         // value that is a mock (/index.js).
         __filename: true,
+
+        // Provide some empty Node modules (required by olm).
+        crypto: 'empty',
+        fs: 'empty'
     },
     optimization: {
         concatenateModules: minimize,
@@ -186,7 +190,8 @@ const config = {
     ].filter(Boolean),
     resolve: {
         alias: {
-            jquery: `jquery/dist/jquery${minimize ? ".min" : ""}.js`,
+            'focus-visible': 'focus-visible/dist/focus-visible.min.js',
+            jquery: `jquery/dist/jquery${minimize ? '.min' : ''}.js`
         },
         aliasFields: ["browser"],
         extensions: [
@@ -246,6 +251,12 @@ module.exports = [
         },
         performance: getPerformanceHints(5 * 1024),
     }),
+    Object.assign({}, config, {
+        entry: {
+            'close3': './static/close3.js'
+        },
+        performance: getPerformanceHints(128 * 1024)
+    }),
 
     // Because both video-blur-effect and rnnoise-processor modules are loaded
     // in a lazy manner using the loadScript function with a hard coded name,
@@ -290,8 +301,8 @@ module.exports = [
             library: "JitsiMeetExternalAPI",
             libraryTarget: "umd",
         }),
-        performance: getPerformanceHints(30 * 1024),
-    }),
+        performance: getPerformanceHints(35 * 1024)
+    })
 ];
 
 /**

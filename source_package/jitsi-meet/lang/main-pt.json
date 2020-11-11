@@ -113,10 +113,17 @@
         "appNotInstalled": "Precisa da aplicação móvel {{app}} para participar na reunião com o seu telefone.",
         "description": "Não acontece nada? Estamos a tentar iniciar a sua reunião na aplicação desktop {{app}}. Tente novamente ou inicie na aplicação web {{app}}.",
         "descriptionWithoutWeb": "Não aconteceu nada? Tentamos iniciar a sua reunião na aplicação desktop {{app}}.",
+        "descriptionDesktopDownload": "Faça o download e instale o aplicativo de desktop {{app}} para ter mais qualidade de áudio e vídeo.",
         "downloadApp": "Transfira a Aplicação",
+        "ifDoNotHaveApp": "Se você ainda não tem o aplicativo:",
+        "ifHaveApp": "Se você já tem o aplicativo:",
+        "ifWantsWeb": "Se você prefere a versão web:",
+        "joinInApp": "Join this meeting using the app",
         "launchWebButton": "Iniciar na web",
         "openApp": "Continue na aplicação",
         "title": "A iniciar a sua reunião na {{app}}...",
+        "desktopDownloadTitle": "Ainda não tem o o aplicativo de desktop {{app}}?",
+        "winDownloadButton": "Download para Windows",
         "tryAgainButton": "Tente novamente no desktop"
     },
     "defaultLink": "ex.: {{url}}",
@@ -731,6 +738,8 @@
         "go": "IR",
         "goSmall": "IR",
         "join": "",
+        "jitsiMeet": "Udok Vídeo",
+        "jitsiOnMobile": "Udok aplicativos – faça o download dos nossos aplicativos para melhor qualidade de vídeo",
         "info": "Informações",
         "privacy": "Política de Privacidade",
         "recentList": "Recente",
@@ -740,7 +749,13 @@
         "roomname": "Digite o nome da sala",
         "roomnameHint": "Digite o nome ou a URL da sala que você deseja entrar. Você pode digitar um nome, e apenas deixe para as pessoas que você quer se reunir digitem o mesmo nome.",
         "sendFeedback": "Enviar comentários",
+        "secureMeetings": "Agendamento de consultas, biblioteca colaborativa, plataforma de comunicação ágil, algoritmo inteligente de agendamento de consultas, tudo em um único lugar para otimizar a relação profissional de saúde e paciente. ",
+        "startMeeting": "Iniciar chamada de vídeo",
         "terms": "Termos",
         "title": "Videoconferências mais seguras, flexíveis e totalmente gratuitas"
+    },
+    "browserunsupported": {
+        "title": "Esse navegador não suporta vídeo-chamadas",
+        "description": "Esse navegador não suporta a tecnologia WebRTC para vídeo-chamadas. Você pode tentar com o navegador padrão de seu dispositivo móvel, ou instalar nosso aplicativo abaixo"
     }
 }

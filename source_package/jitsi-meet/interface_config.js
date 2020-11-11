@@ -44,10 +44,11 @@ var interfaceConfig = {
      */
     CONNECTION_INDICATOR_DISABLED: false,
 
-    DEFAULT_BACKGROUND: "#474747",
-    DEFAULT_LOCAL_DISPLAY_NAME: "eu",
-    DEFAULT_LOGO_URL: "images/watermark.png",
-    DEFAULT_REMOTE_DISPLAY_NAME: "participante",
+    DEFAULT_BACKGROUND: '#474747',
+    DEFAULT_LOCAL_DISPLAY_NAME: 'eu',
+    DEFAULT_LOGO_URL: 'images/watermark.svg',
+    DEFAULT_REMOTE_DISPLAY_NAME: 'participante',
+    DEFAULT_WELCOME_PAGE_LOGO_URL: 'images/watermark.svg',
 
     DISABLE_DOMINANT_SPEAKER_INDICATOR: false,
 
@@ -83,8 +84,10 @@ var interfaceConfig = {
      * Whether or not the blurred video background for large video should be
      * displayed on browsers that can support it.
      */
-    DISABLE_VIDEO_BACKGROUND: false,
+    DISABLE_VIDEO_BACKGROUND: true,
 
+    DISPLAY_WELCOME_FOOTER: true,
+    DISPLAY_WELCOME_PAGE_ADDITIONAL_CARD: false,
     DISPLAY_WELCOME_PAGE_CONTENT: false,
     DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT: false,
 
@@ -102,6 +105,11 @@ var interfaceConfig = {
     GENERATE_ROOMNAMES_ON_WELCOME_PAGE: false,
 
     /**
+     * Hide the logo on the deep linking pages.
+     */
+    HIDE_DEEP_LINKING_LOGO: false,
+
+    /**
      * Hide the invite prompt in the header when alone in the meeting.
      */
     HIDE_INVITE_MORE_HEADER: true,
@@ -109,7 +117,7 @@ var interfaceConfig = {
     INITIAL_TOOLBAR_TIMEOUT: 20000,
     JITSI_WATERMARK_LINK: "https://udok.com.br",
 
-    LANG_DETECTION: true, // Allow i18n to detect the system language
+    LANG_DETECTION: false, // Allow i18n to detect the system language
     LIVE_STREAMING_HELP_LINK: "https://suporte.udok.com.br", // Documentation reference for the live streaming feature.
     LOCAL_THUMBNAIL_RATIO: 16 / 9, // 16:9
 
@@ -128,9 +136,29 @@ var interfaceConfig = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: false,
+    MOBILE_APP_PROMO: true,
 
-    NATIVE_APP_NAME: "Udok",
+    /**
+     * Specify custom URL for downloading android mobile app.
+     */
+    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=br.com.udok.meet',
+
+    /**
+     * Specify custom URL for downloading f droid app.
+     */
+    MOBILE_DOWNLOAD_LINK_F_DROID: 'https://f-droid.org/en/packages/br.com.udok.meet/',
+
+    /**
+     * Specify URL for downloading ios mobile app.
+     */
+    MOBILE_DOWNLOAD_LINK_IOS: 'https://apps.apple.com/us/app/udok-v%C3%ADdeo/id1538836433',
+
+    /**
+     * Specify URL for downloading windows desktop app.
+     */
+    DESKTOP_DOWNLOAD_LINK_WIN: 'https://udok.com.br/installers/udok-video-win64.zip',
+
+    NATIVE_APP_NAME: 'UDOK',
 
     // Names of browsers which should show a warning stating the current browser
     // has a suboptimal experience. Browsers which are not listed as optimal or
@@ -176,7 +204,6 @@ var interfaceConfig = {
     SHOW_JITSI_WATERMARK: false,
     SHOW_POWERED_BY: false,
     SHOW_PROMOTIONAL_CLOSE_PAGE: false,
-    SHOW_WATERMARK_FOR_GUESTS: true, // if watermark is disabled by default, it can be shown only for guests
 
     /*
      * If indicated some of the error dialogs may point to the support URL for
@@ -201,7 +228,7 @@ var interfaceConfig = {
         "microphone",
         "camera",
         "closedcaptions",
-        //"desktop",
+        "desktop",
         //"embedmeeting",
         "fullscreen",
         "fodeviceselection",
@@ -222,7 +249,7 @@ var interfaceConfig = {
         "shortcuts",
         "tileview",
         //"videobackgroundblur",
-        //"download",
+        "download",
         //"help",
         "mute-everyone",
         //"security",
@@ -254,11 +281,6 @@ var interfaceConfig = {
     VIDEO_QUALITY_LABEL_DISABLED: false,
 
     /**
-     * When enabled, the kick participant button will not be presented for users without a JWT
-     */
-    // HIDE_KICK_BUTTON_FOR_GUESTS: false,
-
-    /**
      * How many columns the tile view can expand to. The respected range is
      * between 1 and 5.
      */
@@ -267,12 +289,12 @@ var interfaceConfig = {
     /**
      * Specify custom URL for downloading android mobile app.
      */
-    // MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=org.jitsi.meet',
+    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=br.com.udok.meet',
 
     /**
      * Specify URL for downloading ios mobile app.
      */
-    // MOBILE_DOWNLOAD_LINK_IOS: 'https://itunes.apple.com/us/app/jitsi-meet/id1165103905',
+    MOBILE_DOWNLOAD_LINK_IOS: 'hhttps://apps.apple.com/us/app/udok-v%C3%ADdeo/id1538836433',
 
     /**
      * Specify Firebase dynamic link properties for the mobile apps.
@@ -288,12 +310,12 @@ var interfaceConfig = {
     /**
      * Specify mobile app scheme for opening the app from the mobile browser.
      */
-    // APP_SCHEME: 'org.jitsi.meet',
+    APP_SCHEME: 'udok-video',
 
     /**
      * Specify the Android app package name.
      */
-    // ANDROID_APP_PACKAGE: 'org.jitsi.meet',
+    ANDROID_APP_PACKAGE: 'br.com.udok.meet',
 
     /**
      * Override the behavior of some notifications to remain displayed until
