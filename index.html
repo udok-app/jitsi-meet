@@ -187,17 +187,20 @@
     <script src="https://browser.sentry-cdn.com/5.27.4/bundle.min.js"
         integrity="sha384-yUnxX3o5D7+yEEIKDXlpygg+0Q2LdyklXwZVWUjc6fohGisYvhpyQbRvNYaDGtvU"
         crossorigin="anonymous"></script>
+    <script src="https://js.sentry-cdn.com/611c61cbc2ba4f518b13433624adc792.min.js" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            Sentry.init({
-                dsn: 'https://522cd2faf440467b8bada386f7c6d0c7@o232457.ingest.sentry.io/5277327',
-                release: "udok-video@" + process.env.npm_package_version,
-                integrations: [new Sentry.Integrations.BrowserTracing()],
+             Sentry.onLoad(function () {
+                Sentry.init({
+                     dsn: 'https://522cd2faf440467b8bada386f7c6d0c7@o232457.ingest.sentry.io/5277327',
+                     integrations: [new Sentry.Integrations.BrowserTracing()],
 
-                // We recommend adjusting this value in production, or using tracesSampler
-                // for finer control
-                tracesSampleRate: 1.0,
+                     // We recommend adjusting this value in production, or using tracesSampler
+                     // for finer control
+                     tracesSampleRate: 1.0,
+                 });
             });
+            Sentry.forceLoad();
         });
     </script>
   </head>
