@@ -75,7 +75,6 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
         const { HIDE_DEEP_LINKING_LOGO, NATIVE_APP_NAME, SHOW_DEEP_LINKING_IMAGE } = interfaceConfig;
         const rightColumnStyle
             = SHOW_DEEP_LINKING_IMAGE ? null : { width: '100%' };
-        console.log("!!! isSupportedBrowser()", isSupportedBrowser())
         return (
 
             // Enabling light theme because of the color of the buttons.

@@ -118,7 +118,7 @@
         "ifDoNotHaveApp": "Se você ainda não tem o aplicativo:",
         "ifHaveApp": "Se você já tem o aplicativo:",
         "ifWantsWeb": "Se você prefere a versão web:",
-        "joinInApp": "Join this meeting using the app",
+        "joinInApp": "Abrir no aplicativo",
         "launchWebButton": "Iniciar na web",
         "openApp": "Continue na aplicação",
         "title": "A iniciar a sua reunião na {{app}}...",

@@ -6,7 +6,9 @@
 
     .new-toolbox {
         .toolbox-content {
-            .button-group-center, .button-group-left, .button-group-right {
+            .button-group-center,
+            .button-group-left,
+            .button-group-right {
                 .toolbox-button {
                     .toolbox-icon {
                         width: 28px;
@@ -30,71 +32,79 @@
 }
 
 @media only screen and (max-width: $verySmallScreen) {
-  .welcome {
-      display: block;
+    .welcome {
+        display: block;
 
-      #enter_room {
-        position: relative;
-        height: 42px;
+        #enter_room {
+            position: relative;
+            height: 42px;
 
-        .welcome-page-button {
-          font-size: 16px;
-          left: 0;
-          position: absolute;
-          top: 68px;
-          text-align: center;
-          width: 100%;
+            .welcome-page-button {
+                font-size: 16px;
+                left: 0;
+                position: absolute;
+                top: 68px;
+                text-align: center;
+                width: 100%;
+            }
         }
-      }
 
-      .header {
-          background-color: #002637;
-
-          #enter_room {
-              .enter-room-input-container {
-                  padding-right: 0;
-              }
-
-              .warning-without-link,
-              .warning-with-link {
-                  top: 120px;
-              }
-          }
-      }
-
-      .welcome-tabs {
-          display: none;
-      }
-
-      .header-text-title {
-        text-align: center;
-      }
-
-      .welcome-cards-container {
-        padding: 0;
-      }
-
-      &.without-content {
         .header {
-          height: 100%;
+            #enter_room {
+                .enter-room-input-container {
+                    padding-right: 0;
+                }
+
+                .warning-without-link,
+                .warning-with-link {
+                    top: 120px;
+                }
+            }
         }
-      }
 
-      #moderated-meetings {
-          display: none;
-      }
+        .welcome-tabs {
+            display: none;
+        }
 
-      .welcome-footer-row-block {
-          display: block;
-      }
-      .welcome-badge {
-          margin-right: 16px;
-      }
+        .header-text-title {
+            text-align: center;
+        }
 
-      .welcome-footer {
-          display: none;
-      }
-  }
+        .welcome-cards-container {
+            padding: 0;
+        }
+
+        &.without-content {
+            .header {
+                height: 100%;
+            }
+        }
+
+        #moderated-meetings {
+            display: none;
+        }
+
+        .welcome-footer-row-block {
+            display: block;
+        }
+        .welcome-badge {
+            margin-right: 16px;
+        }
+
+        .welcome-footer {
+            .welcome-footer-row-block {
+                text-align: center;
+            }
+
+            .welcome-footer-row-1-text {
+                margin: 12px auto;
+            }
+
+            .welcome-badge {
+                margin-right: 0px;
+            }
+        }
+    }
 
     #videoResolutionLabel {
         display: none;
@@ -106,7 +116,9 @@
     }
     .new-toolbox {
         .toolbox-content {
-            .button-group-center, .button-group-left, .button-group-right {
+            .button-group-center,
+            .button-group-left,
+            .button-group-right {
                 .settings-button-small-icon {
                     display: none;
                 }

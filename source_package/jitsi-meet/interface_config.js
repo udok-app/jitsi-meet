@@ -117,7 +117,7 @@ var interfaceConfig = {
     INITIAL_TOOLBAR_TIMEOUT: 20000,
     JITSI_WATERMARK_LINK: "https://udok.com.br",
 
-    LANG_DETECTION: false, // Allow i18n to detect the system language
+    LANG_DETECTION: true, // Allow i18n to detect the system language
     LIVE_STREAMING_HELP_LINK: "https://suporte.udok.com.br", // Documentation reference for the live streaming feature.
     LOCAL_THUMBNAIL_RATIO: 16 / 9, // 16:9
 
@@ -294,7 +294,7 @@ var interfaceConfig = {
     /**
      * Specify URL for downloading ios mobile app.
      */
-    MOBILE_DOWNLOAD_LINK_IOS: 'hhttps://apps.apple.com/us/app/udok-v%C3%ADdeo/id1538836433',
+    MOBILE_DOWNLOAD_LINK_IOS: 'https://apps.apple.com/us/app/udok-v%C3%ADdeo/id1538836433',
 
     /**
      * Specify Firebase dynamic link properties for the mobile apps.

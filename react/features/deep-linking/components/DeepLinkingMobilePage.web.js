@@ -99,7 +99,6 @@ class DeepLinkingMobilePage extends Component<Props> {
         const downloadButtonMobileClassName
             = `${_SNS}__button ${_SNS}__button_primary btn_${Platform.OS}`;
 
-        console.log('!!!',Platform);
         const onOpenLinkProperties = _downloadUrl
             ? {
                 // When opening a link to the download page, we want to let the

@@ -19,7 +19,6 @@ export default {
      * @returns {string} The default language if any.
      */
     lookup() {
-        console.log("!!! lookup", config.defaultLanguage)
         return config.defaultLanguage;
     },
 
