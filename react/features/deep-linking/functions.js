@@ -1,7 +1,7 @@
 /* global interfaceConfig */
 
 import { isMobileBrowser } from '../base/environment/utils';
-import { isSupportedMobileBrowser } from '../base/environment/environment';
+import { isSupportedMobileBrowser, isElectronBrowser } from '../base/environment/environment';
 import { Platform } from '../base/react';
 import { URI_PROTOCOL_PATTERN } from '../base/util';
 import { isVpaasMeeting } from '../billing-counter/functions';
@@ -71,6 +71,9 @@ export function getDeepLinkingPage(state) {
         return Promise.resolve(
             typeof mobileAppPromo === 'undefined' || Boolean(mobileAppPromo)
                 ? DeepLinkingMobilePage : undefined);
+    }
+    if (isElectronBrowser()){
+        return Promise.resolve(undefined);
     }
 
     return _openDesktopApp(state).then(
