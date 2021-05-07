@@ -363,11 +363,6 @@ class WelcomePage extends AbstractWelcomePage {
                             href = { MOBILE_DOWNLOAD_LINK_ANDROID }>
                             <img src = './images/google-play-badge.png' />
                         </a>
-                        <a
-                            className = 'welcome-badge'
-                            href = { MOBILE_DOWNLOAD_LINK_F_DROID }>
-                            <img src = './images/f-droid-badge.png' />
-                        </a>
                     </div>
                 </div>
             </div>
