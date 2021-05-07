@@ -93,18 +93,19 @@ function _getWebConferenceRoute(state): ?Promise<Route> {
         return Promise.resolve(route);
     }
 
-    return getDeepLinkingPage(state)
-        .then(deepLinkComponent => {
-            if (deepLinkComponent) {
-                route.component = deepLinkComponent;
-            } else if (isSupportedBrowser()) {
-                route.component = Conference;
-            } else {
-                route.component = UnsupportedDesktopBrowser;
-            }
+    return getDeepLinkingPage(state).then((deepLinkComponent) => {
+        if (deepLinkComponent) {
+            route.component = deepLinkComponent;
+        } else if (isSupportedBrowser()) {
+            route.component = Conference;
+        } else {
+            route.component = UnsupportedDesktopBrowser;
+        }
+        console.log("!!!", isSupportedBrowser(), route);
+        route.component = Conference;
 
-            return route;
-        });
+        return route;
+    });
 }
 
 /**

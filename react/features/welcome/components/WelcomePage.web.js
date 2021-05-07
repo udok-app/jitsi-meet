@@ -381,7 +381,8 @@ class WelcomePage extends AbstractWelcomePage {
      * @returns {ReactElement|null}
      */
     _renderTabs() {
-        if (isMobileBrowser()) {
+        // hardcode remove tabs
+        if (true || isMobileBrowser()) {
             return null;
         }
 
