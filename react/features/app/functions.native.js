@@ -29,7 +29,7 @@ export function getName() {
 }
 
 /**
- * Returns the path to the Jitsi Meet SDK bundle on iOS. On Android it will be
+ * Returns the path to the Udok Vídeo SDK bundle on iOS. On Android it will be
  * undefined.
  *
  * @returns {string|undefined}

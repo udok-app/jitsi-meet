@@ -3,8 +3,9 @@
 /**
  * Style variables
  */
-$baseFontFamily: -apple-system, BlinkMacSystemFont, 'open_sanslight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$hangupColor:#bf2117;
+$baseFontFamily: -apple-system, BlinkMacSystemFont, "open_sanslight",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+$hangupColor: #bf2117;
 $hangupHoverColor: #bf2117;
 $hangupFontSize: 2em;
 
@@ -41,7 +42,7 @@ $presence-idle: rgb(172, 172, 172);
 $newToolbarBackgroundColor: #131519;
 $newToolbarButtonHoverColor: rgba(255, 255, 255, 0.2);
 $newToolbarButtonToggleColor: rgba(255, 255, 255, 0.15);
-$menuBG:#242528;
+$menuBG: #242528;
 $newToolbarFontSize: 24px;
 $newToolbarHangupFontSize: 32px;
 $newToolbarSize: 48px;
@@ -172,6 +173,11 @@ $welcomePageWatermarkHeight: 32px;
 /**
  * Welcome page variables.
  */
+$welcomePageBodyBackground: linear-gradient(
+    45deg,
+    rgba(29, 224, 153, 0.8),
+    rgba(29, 200, 205, 0.8)
+);
 $welcomePageDescriptionColor: #fff;
 $welcomePageFontFamily: inherit;
 $welcomePageBackground: linear-gradient(
@@ -180,8 +186,10 @@ $welcomePageBackground: linear-gradient(
     rgba(29, 200, 205, 0.8)
 );
 $welcomePageTitleColor: #fff;
+$chatBackgroundColor: white;
+$overflowMenuItemBackground: white;
 
-$welcomePageHeaderBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/welcome-background.png');
+$welcomePageHeaderBackground: none;
 $welcomePageHeaderBackgroundPosition: center;
 $welcomePageHeaderBackgroundRepeat: none;
 $welcomePageHeaderBackgroundSize: cover;
