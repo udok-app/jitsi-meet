@@ -143,7 +143,7 @@ var interfaceConfig = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: false,
+    MOBILE_APP_PROMO: true,
 
     /**
      * Specify custom URL for downloading android mobile app.
@@ -163,7 +163,7 @@ var interfaceConfig = {
     /**
      * Specify URL for downloading windows desktop app.
      */
-    DESKTOP_DOWNLOAD_LINK_WIN: 'https://udok.com.br/installers/udok-video-win64.zip',
+    DESKTOP_DOWNLOAD_LINK_WIN: 'https://udok.digital/installers/udok-video-win64.zip',
 
     NATIVE_APP_NAME: 'UDOK',
 

@@ -685,6 +685,7 @@
     },
     "startupoverlay": {
         "policyText": " ",
+        "genericTitle": "O Udok Vídeo precisa usar seu microfone e câmera.",
         "title": "O {{app}} precisa usar seu microfone e câmera."
     },
     "suspendedoverlay": {

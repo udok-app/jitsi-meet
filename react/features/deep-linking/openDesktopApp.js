@@ -8,5 +8,5 @@
  * with false otherwise.
  */
 export function _openDesktopApp(state: Object) { // eslint-disable-line no-unused-vars
-    return Promise.resolve(false);
+    return Promise.resolve(true);
 }
