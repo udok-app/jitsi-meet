@@ -344,7 +344,6 @@ class WelcomePage extends AbstractWelcomePage {
         const { t } = this.props;
         const {
             MOBILE_DOWNLOAD_LINK_ANDROID,
-            MOBILE_DOWNLOAD_LINK_F_DROID,
             MOBILE_DOWNLOAD_LINK_IOS
         } = interfaceConfig;
 
@@ -363,11 +362,6 @@ class WelcomePage extends AbstractWelcomePage {
                             href = { MOBILE_DOWNLOAD_LINK_ANDROID }>
                             <img src = './images/google-play-badge.png' />
                         </a>
-                        <a
-                            className = 'welcome-badge'
-                            href = { MOBILE_DOWNLOAD_LINK_F_DROID }>
-                            <img src = './images/f-droid-badge.png' />
-                        </a>
                     </div>
                 </div>
             </div>
@@ -381,7 +375,8 @@ class WelcomePage extends AbstractWelcomePage {
      * @returns {ReactElement|null}
      */
     _renderTabs() {
-        if (isMobileBrowser()) {
+        // hardcode remove tabs
+        if (true || isMobileBrowser()) {
             return null;
         }
 

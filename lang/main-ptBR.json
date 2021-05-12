@@ -143,12 +143,16 @@
         "appNotInstalled": "Você precisa do aplicativo móvel {{app}} para participar da reunião no seu telefone.",
         "description": "Nada acontece? Estamos tentando iniciar sua reunião no aplicativo desktop {{app}}. Tente novamente ou inicie ele na aplicação web {{app}}.",
         "descriptionWithoutWeb": "Nada aconteceu? Tentamos iniciar sua reunião no aplicativo de desktop {{app}}.",
+        "descriptionDesktopDownload": "Faça o download e instale o aplicativo de desktop {{app}} para ter mais qualidade de áudio e vídeo.",
         "downloadApp": "Baixe o Aplicativo",
-        "ifDoNotHaveApp": "Se você não tem o app ainda:",
-        "ifHaveApp": "Se você já tem o app:",
-        "joinInApp": "Entrar na reunião usando o app",
+        "ifDoNotHaveApp": "Se você ainda não tem o aplicativo:",
+        "ifHaveApp": "Se você já tem o aplicativo:",
+        "ifWantsWeb": "Se você prefere a versão web:",
+        "joinInApp": "Abrir no aplicativo",
         "launchWebButton": "Iniciar na web",
         "title": "Iniciando sua reunião no {{app}}...",
+        "desktopDownloadTitle": "Ainda não tem o o aplicativo de desktop {{app}}?",
+        "winDownloadButton": "Download para Windows",
         "tryAgainButton": "Tente novamente no desktop"
     },
     "defaultLink": "ex.: {{url}}",
@@ -335,7 +339,7 @@
         "answer": "Responder",
         "audioCallTitle": "Chamada recebida",
         "decline": "Dispensar",
-        "productLabel": "do Jitsi Meet",
+        "productLabel": "do Udok Vídeo",
         "videoCallTitle": "Chamada de vídeo recebida"
     },
     "info": {
@@ -496,7 +500,7 @@
         "newDeviceAudioTitle": "Novo dispositivo de áudio detectado",
         "newDeviceAction": "Usar",
         "OldElectronAPPTitle": "Vulnerabilidade de segurança!",
-        "oldElectronClientDescription1": "Você está usando um versão antiga do cliente Jitsi Meet que possui uma conhecida vulnerabilidade de segurança. Por favor tenha certeza de atulizar para a nossa ",
+        "oldElectronClientDescription1": "Você está usando um versão antiga do cliente Udok Vídeo que possui uma conhecida vulnerabilidade de segurança. Por favor tenha certeza de atulizar para a nossa ",
         "oldElectronClientDescription2": "última versão",
         "oldElectronClientDescription3": " agora!"
     },
@@ -877,6 +881,8 @@
         "go": "IR",
         "goSmall": "IR",
         "join": "CRIAR / ENTRAR",
+        "jitsiMeet": "Udok Vídeo",
+        "jitsiOnMobile": "Udok aplicativos – faça o download dos nossos aplicativos para melhor qualidade de vídeo",
         "info": "Informações",
         "moderatedMessage": "Ou <a href=\"{{url}}\" rel=\"noopener noreferrer\" target=\"_blank\">agende uma URL de reunião</a> antes, onde você é o único moderador.",
         "privacy": "Política de Privacidade",
@@ -888,6 +894,8 @@
         "roomname": "Digite o nome da sala",
         "roomnameHint": "Digite o nome ou a URL da sala que você deseja entrar. Você pode digitar um nome, e apenas deixe para as pessoas que você quer se reunir digitem o mesmo nome.",
         "sendFeedback": "Enviar comentários",
+        "secureMeetings": "Agendamento de consultas, biblioteca colaborativa, plataforma de comunicação ágil, algoritmo inteligente de agendamento de consultas, tudo em um único lugar para otimizar a relação profissional de saúde e paciente. ",
+        "startMeeting": "Iniciar chamada de vídeo",
         "terms": "Termos",
     	"title": "Videoconferências mais seguras, flexíveis e totalmente gratuitas"
     },
@@ -930,5 +938,9 @@
         "passwordJoinButton": "Solicitar",
         "reject": "Rejeitar",
         "toggleLabel": "Habilitar lobby"
+    },
+    "browserunsupported": {
+        "title": "Esse navegador não suporta vídeo-chamadas",
+        "description": "Esse navegador não suporta a tecnologia WebRTC para vídeo-chamadas. Você pode tentar novamente com o navegador padrão de seu dispositivo ou instalar nosso aplicativo abaixo para uma melhor experiência."
     }
 }

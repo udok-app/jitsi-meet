@@ -85,6 +85,7 @@ android/app/google-services.json
 ios/app/dropbox.key
 ios/app/GoogleService-Info.plist
 
+jitsi-meet.tar.bz2
 .vscode
 
 # TWA
@@ -92,3 +93,4 @@ twa/*.apk
 twa/*.aab
 twa/assetlinks.json
 
+tmp

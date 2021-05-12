@@ -145,12 +145,16 @@
         "appNotInstalled": "You need the {{app}} mobile app to join this meeting on your phone.",
         "description": "Nothing happened? We tried launching your meeting in the {{app}} desktop app. Try again or launch it in the {{app}} web app.",
         "descriptionWithoutWeb": "Nothing happened? We tried launching your meeting in the {{app}} desktop app.",
+        "descriptionDesktopDownload": "Download and install the {{app}} desktop app to have better audio and video quality.",
         "downloadApp": "Download the app",
         "ifDoNotHaveApp": "If you don't have the app yet:",
         "ifHaveApp": "If you already have the app:",
+        "ifWantsWeb": "If you prefer the web version:",
         "joinInApp": "Join this meeting using the app",
         "launchWebButton": "Launch in web",
         "title": "Launching your meeting in {{app}}...",
+        "desktopDownloadTitle": "You don't have the {{app}} desktop app?",
+        "winDownloadButton": "Download for Windows",
         "tryAgainButton": "Try again in desktop"
     },
     "defaultLink": "e.g. {{url}}",
@@ -360,7 +364,7 @@
         "answer": "Answer",
         "audioCallTitle": "Incoming call",
         "decline": "Dismiss",
-        "productLabel": "from Jitsi Meet",
+        "productLabel": "from Udok Vídeo",
         "videoCallTitle": "Incoming video call"
     },
     "info": {
@@ -525,7 +529,7 @@
         "newDeviceAudioTitle": "New audio device detected",
         "newDeviceAction": "Use",
         "OldElectronAPPTitle": "Security vulnerability!",
-        "oldElectronClientDescription1": "You appear to be using an old version of the Jitsi Meet client which has known security vulnerabilities. Please make sure you update to our ",
+        "oldElectronClientDescription1": "You appear to be using an old version of the Udok Vídeo client which has known security vulnerabilities. Please make sure you update to our ",
         "oldElectronClientDescription2": "latest build",
         "oldElectronClientDescription3": " now!"
     },
@@ -929,11 +933,11 @@
         "getHelp": "Get help",
         "go": "GO",
         "goSmall": "GO",
-        "headerTitle": "Jitsi Meet",
-        "headerSubtitle": "Secure and high quality meetings",
+        "headerTitle": "Udok Vídeo",
+        "headerSubtitle": "Consultas de telemedicina",
         "info": "Dial-in info",
         "join": "CREATE / JOIN",
-        "jitsiOnMobile": "Jitsi on mobile – download our apps and start a meeting from anywhere",
+        "jitsiOnMobile": "Udok Vídeo – baixe nossos apps para telemedicina",
         "moderatedMessage": "Or <a href=\"{{url}}\" rel=\"noopener noreferrer\" target=\"_blank\">book a meeting URL</a> in advance where you are the only moderator.",
         "privacy": "Privacy",
         "recentList": "Recent",
@@ -988,5 +992,9 @@
         "passwordJoinButton": "Join",
         "reject": "Reject",
         "toggleLabel": "Enable lobby"
+    },
+    "browserunsupported": {
+        "title": "This browser cannot make video-calls",
+        "description": "This browser has no support for WebRTC technology. You can try again with your devices default browser or install our apps for best use and quality."
     }
 }
