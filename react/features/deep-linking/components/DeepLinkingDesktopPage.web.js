@@ -10,6 +10,7 @@ import { createDeepLinkingPageEvent, sendAnalytics } from '../../analytics';
 import { isSupportedBrowser } from '../../base/environment';
 import { translate } from '../../base/i18n';
 import { connect } from '../../base/redux';
+import {generateDeepLinkingURL} from '../functions';
 import {
     openWebApp,
     openDesktopApp
@@ -64,6 +65,10 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
         sendAnalytics(
             createDeepLinkingPageEvent(
                 'displayed', 'DeepLinkingDesktop', { isMobileBrowser: false }));
+        const url = generateDeepLinkingURL();
+        setTimeout(() => {
+            document.location = url;
+        }, 500)
     }
 
     /**
@@ -76,7 +81,6 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
         const { HIDE_DEEP_LINKING_LOGO, NATIVE_APP_NAME, SHOW_DEEP_LINKING_IMAGE } = interfaceConfig;
         const rightColumnStyle
             = SHOW_DEEP_LINKING_IMAGE ? null : { width: '100%' };
-
         return (
 
             // Enabling light theme because of the color of the buttons.
@@ -124,15 +128,39 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
                                     <ButtonGroup>
                                         <Button
                                             appearance = 'default'
+                                            href={generateDeepLinkingURL()}
                                             onClick = { this._onTryAgain }>
                                             { t(`${_TNS}.tryAgainButton`) }
                                         </Button>
                                         {
                                             isSupportedBrowser()
-                                                && <Button onClick = { this._onLaunchWeb }>
+                                                && <Button onClick = { this._onLaunchWeb } appearance = 'primary'>
                                                     { t(`${_TNS}.launchWebButton`) }
                                                 </Button>
                                         }
+                                    </ButtonGroup>
+                                </div>
+                                <h1 className = 'title'>
+                                    {
+                                        t(`${_TNS}.desktopDownloadTitle`,
+                                        { app: NATIVE_APP_NAME })
+                                    }
+                                </h1>
+                                <p className = 'description'>
+                                    {
+                                        t(
+                                            `${_TNS}.descriptionDesktopDownload`,
+                                            { app: NATIVE_APP_NAME }
+                                        )
+                                    }
+                                </p>
+                                <div className = 'buttons'>
+                                    <ButtonGroup>
+                                        <Button
+                                            appearance = 'default'
+                                            onClick = { this._onDownloadWin }>
+                                            { t(`${_TNS}.winDownloadButton`) }
+                                        </Button>
                                     </ButtonGroup>
                                 </div>
                             </div>
@@ -154,7 +182,6 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
         sendAnalytics(
             createDeepLinkingPageEvent(
                 'clicked', 'tryAgainButton', { isMobileBrowser: false }));
-        this.props.dispatch(openDesktopApp());
     }
 
     _onLaunchWeb: () => void;
@@ -167,8 +194,21 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
     _onLaunchWeb() {
         sendAnalytics(
             createDeepLinkingPageEvent(
-                'clicked', 'launchWebButton', { isMobileBrowser: false }));
+                'clicked', 'launchWebButton', { isMobileBrowser: true }));
         this.props.dispatch(openWebApp());
+    }
+
+    /**
+     * Handles install windows app button click.
+     *
+     * @returns {void}
+     */
+    _onDownloadWin() {
+        const { DESKTOP_DOWNLOAD_LINK_WIN } = interfaceConfig;
+        sendAnalytics(
+            createDeepLinkingPageEvent(
+                'clicked', 'launchDesktopAppInstall', { isMobileBrowser: false }));
+        window.open(DESKTOP_DOWNLOAD_LINK_WIN);
     }
 }
 

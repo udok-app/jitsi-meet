@@ -94,7 +94,10 @@ class DeepLinkingMobilePage extends Component<Props> {
         const { HIDE_DEEP_LINKING_LOGO, NATIVE_APP_NAME, SHOW_DEEP_LINKING_IMAGE } = interfaceConfig;
         const downloadButtonClassName
             = `${_SNS}__button ${_SNS}__button_primary`;
-
+        const downloadButtonSecondaryClassName
+            = `${_SNS}__button ${_SNS}__button_secondary`;
+        const downloadButtonMobileClassName
+            = `${_SNS}__button ${_SNS}__button_primary btn_${Platform.OS}`;
 
         const onOpenLinkProperties = _downloadUrl
             ? {
@@ -111,6 +114,10 @@ class DeepLinkingMobilePage extends Component<Props> {
                 target: '_blank',
                 rel: 'noopener noreferrer'
             };
+        const storeBadge = {
+            android: './images/google-play-badge.png',
+            ios: './images/app-store-badge.png',
+        }[Platform.OS]
 
         return (
             <div className = { _SNS }>
@@ -143,28 +150,38 @@ class DeepLinkingMobilePage extends Component<Props> {
                         href = { generateDeepLinkingURL() }
                         onClick = { this._onOpenApp }
                         target = '_top'>
-                        <button className = { `${_SNS}__button ${_SNS}__button_primary` }>
+                        <button className = { downloadButtonClassName }>
                             { t(`${_TNS}.joinInApp`) }
                         </button>
                     </a>
                     <p className = { `${_SNS}__text` }>
                         { t(`${_TNS}.ifDoNotHaveApp`) }
                     </p>
+                    {
+                        storeBadge ? <a
+                            className = 'welcome-badge'
+                            href = { this._generateDownloadURL() }>
+                            <img src = {storeBadge}/>
+                        </a> : null
+                    }
                     <a
                         { ...onOpenLinkProperties }
                         href = { this._generateDownloadURL() }
                         onClick = { this._onDownloadApp }
                         target = '_top'>
-                        <button className = { downloadButtonClassName }>
+                        <button className = { downloadButtonMobileClassName }>
                             { t(`${_TNS}.downloadApp`) }
                         </button>
                     </a>
+                    <p className = { `${_SNS}__text` }>
+                        { t(`${_TNS}.ifWantsWeb`) }
+                    </p>
                     {
                         isSupportedMobileBrowser()
                             && <a
                                 onClick = { this._onLaunchWeb }
                                 target = '_top'>
-                                <button className = { downloadButtonClassName }>
+                                <button className = { downloadButtonSecondaryClassName }>
                                     { t(`${_TNS}.launchWebButton`) }
                                 </button>
                             </a>
